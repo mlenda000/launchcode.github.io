@@ -38,8 +38,9 @@ describe("Rover class", function() {
     let ship = new Rover(10000);
     let newCommands = ship.receiveMessage(msg);
     let roverStatus = {mode: ship.mode, generatorWatts: ship.generatorWatts, position: ship.position}  
-expect(newCommands.results[0].roverStatus.generatorWatts).toEqual(110); expect(newCommands.results[0].roverStatus.position).toEqual(10000);
-expect(newCommands.results[0].roverStatus.mode).toEqual('NORMAL')    
+    expect(newCommands.results[0].roverStatus.generatorWatts).toEqual(110); 
+    expect(newCommands.results[0].roverStatus.position).toEqual(10000);
+    expect(newCommands.results[0].roverStatus.mode).toEqual('NORMAL')    
       
   });
 
@@ -59,7 +60,7 @@ expect(newCommands.results[0].roverStatus.mode).toEqual('NORMAL')
     let ship = new Rover(10000);
     let newCommands = ship.receiveMessage(msg);
     expect(newCommands.results[1]).toEqual({completed: false});
-expect(ship.position).toEqual(10000);
+    expect(ship.position).toEqual(10000);
   });
 
   // Test 13

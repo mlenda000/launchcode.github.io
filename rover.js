@@ -31,7 +31,7 @@ class Rover {
         throw Error("Command Type must be given"); 
       } 
     } 
-
+    // console.log(results)
     return {message,results};
   } 
 }
@@ -40,6 +40,6 @@ class Rover {
 // let message = new Message('Test message with two commands', commands);
 // let rover = new Rover(98382);    // Passes 98382 as the rover's position.
 // let response = rover.receiveMessage(message);
-// console.log(response);
+// console.log(JSON.stringify(response));
 
 module.exports = Rover;
