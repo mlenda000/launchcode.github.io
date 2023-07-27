@@ -10,7 +10,7 @@ describe("Message class", function() {
 
   // Test 5
   it("constructor sets name", function(){
-    let msg = new Message("Test Message", []);
+    let msg = new Message("Test Message");
     expect(msg.name).toEqual("Test Message");
   });
 

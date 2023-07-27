@@ -18,7 +18,7 @@ describe("Rover class", function() {
     let message = new Message("MSG005", []);
     let rover = new Rover(42);
     let response = rover.receiveMessage(message);
-    expect(response.message).toEqual('MSG005');  
+    expect(response.message).toEqual(message.name);  
 
   });
 
@@ -37,10 +37,9 @@ describe("Rover class", function() {
     let msg = new Message("If STATUS_CHECK is entered",cmd);
     let ship = new Rover(10000);
     let newCommands = ship.receiveMessage(msg);
-    let roverStatus = {mode: ship.mode, generatorWatts: ship.generatorWatts, position: ship.position}  
     expect(newCommands.results[0].roverStatus.generatorWatts).toEqual(110); 
     expect(newCommands.results[0].roverStatus.position).toEqual(10000);
-    expect(newCommands.results[0].roverStatus.mode).toEqual('NORMAL')    
+    expect(newCommands.results[0].roverStatus.mode).toEqual('NORMAL');  
       
   });
 
